@@ -8,12 +8,12 @@ class ProbabilitySimulator:
     def permutations(self):
         n = int(input("Please enter the number of items to choose from: "))         #EH
         r = int(input("Please enter the number of items chosen to be arranged: "))  #EH
-        print(f"The permutation is: {m.perm(n,r)}\nThe probability of a permutation is: {1/m.perm(n,r): .4f}")
+        print(f"The permutation is: {m.perm(n,r)}\nThe probability of a permutation is: {100/m.perm(n,r): .4f}")
 
     def combinations(self):
         n = int(input("Please enter the number of items to choose from: "))         #EH
         r = int(input("Please enter the number of items chosen to be chosen: "))    #EH
-        print(f"The combination is: {m.comb(n,r)}\nThe probability of a combination is: {1/m.comb(n,r): .4f}")
+        print(f"The combination is: {m.comb(n,r)}\nThe probability of a combination is: {100/m.comb(n,r): .2f}")
 
     def add_event(self, name):  # adds event and probability to the simulator
         ask_again = True
@@ -32,11 +32,17 @@ class ProbabilitySimulator:
         trial = int(input(f"{name} please enter the number of trials: ")) #EH
         return trial
 
-    def bayes_theorem(self, a, b_given_a, b):
+    def bayes_theorem(self):
+        text = "Please enter the scenario you want to compute\nIn the format: 'event A' given 'event B'\nE.g. stock price going 5%, given the CEO of the company is fired\n**It is important that the 'given' keyword is specified!"
+        scenario = input(f"{text}\n\nScenario: ").split('given')
+        event_a, event_b = scenario[0].strip(), scenario[1].strip()
+        b_given_a = float(input(f"Please enter the probability of {event_b}, given {event_a} has happened:\n"))  #EH
+        a = float(input(f"Please enter the probability of {event_a} happening:\n"))        #EH
+        b = float(input(f"Please enter the probability of {event_b} happening:\n"))        #EH
         denominator = b
         numerator = b_given_a * a
         a_given_b = numerator / denominator
-        return a_given_b
+        print(f'The probability of {''.join(scenario)}, is {a_given_b*100: .2f}%')
 
     
     # facilitates the simulation of the scenarios and returns the probabilities
