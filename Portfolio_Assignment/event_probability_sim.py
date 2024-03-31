@@ -27,8 +27,10 @@ class ProbabilitySimulator:
         probability_event = float(input(f'Please enter the probability of {event} happening: '))
         if not 0 < probability_event < 1:
             raise Exception(f"\nSorry {name}, you must enter a probability of event as a decimal between 0 - 1\n")
-        trial = int(input("Please enter the number of trials: ")) #EH
-
+        
+        trial = int(input("Please enter the number of trials: "))
+        if trial < 0:
+            raise Exception("Value of trial must be a non-negative integer")
         success = np.random.rand(trial) < probability_event
         success_count = np.sum(success)
         print("Value entered for number of trial must be non-negative")
