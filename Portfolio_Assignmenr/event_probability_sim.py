@@ -28,9 +28,14 @@ class ProbabilitySimulator:
             else:
                 break
 
-    def trials(self, name):
-        trial = int(input(f"{name} please enter the number of trials: ")) #EH
-        return trial
+    def trials_sim(self, name):
+        event = input(f'Hey {name}! Please enter the event you want to simulate:\n E.g. Drawing a king from a deck of cards\nEvent: ')
+        probability_event = float(input(f'Please enter the probability of {event} happening: '))
+        trial = int(input("Please enter the number of trials: ")) #EH
+        success = np.random.rand(trial) < probability_event
+        success_count = np.sum(success)
+        result = success_count / trial
+        print(f"The probability of {event} happening, given {trial} trials is: {result*100}%")
 
     def bayes_theorem(self):
         text = "Please enter the scenario you want to compute\nIn the format: 'event A' given 'event B'\nE.g. stock price going 5%, given the CEO of the company is fired\n**It is important that the 'given' keyword is specified!"
@@ -50,7 +55,8 @@ class ProbabilitySimulator:
         print("Welcome to the Event Probability Simulator!")
         name = input("Please enter your name: ")
         print(f"Hi {name}! Please select one of the following operations:\n")
-        print("[1] - Calculate Permutation\n[2] - Calculate Combinations\n[3] - Update probability using Bayes' Theorem\n")
+        print("[1] - Calculate Permutation\n[2] - Calculate Combinations")
+        print("[3] - Simulate an event given a number of trials\n[4] - Update probability using Bayes' Theorem\n")
         selection = int(input(f'{name} enter your selection: ')) #EH
 
         # navigates to the users selected operation
@@ -59,10 +65,9 @@ class ProbabilitySimulator:
         elif selection == 2:
             self.combinations()
         elif selection == 3:
+            self.trials_sim(name)
+        elif selection == 4:
             self.bayes_theorem()
-
-        # trial = self.trials(name)
-        # self.add_event(name)
 
 
 # Script:
