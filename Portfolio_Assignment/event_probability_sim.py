@@ -22,19 +22,6 @@ class ProbabilitySimulator:
         except ValueError:
             print("Hey, the values entered must be non-negative integers")
 
-    # def add_event(self, name):  # adds event and probability to the simulator
-    #     ask_again = True
-    #     while True:
-    #         if ask_again:
-    #             event = input(f"{name} please enter your event:\n")
-    #             probability = float(input("Also, please enter the probability of this event:\n")) #EH
-    #             self.events[event] = probability
-    #             ask = input("Do you want to add anymore events? [Y/N]\n").lower()   #EH
-    #             if ask == 'n':
-    #                 ask_again = False
-    #         else:
-    #             break
-
     def trials_sim(self, name):
         event = input(f'Hey {name}! Please enter the event you want to simulate:\n E.g. Drawing a king from a deck of cards\nEvent: ')
         probability_event = float(input(f'Please enter the probability of {event} happening: '))
@@ -90,3 +77,21 @@ class ProbabilitySimulator:
 # Script:
 simulator = ProbabilitySimulator()
 simulator.run_simulation()
+
+    
+    
+    
+    
+    
+    # def add_event(self, name):  # adds event and probability to the simulator
+    #     ask_again = True
+    #     while True:
+    #         if ask_again:
+    #             event = input(f"{name} please enter your event:\n")
+    #             probability = float(input("Also, please enter the probability of this event:\n")) #EH
+    #             self.events[event] = probability
+    #             ask = input("Do you want to add anymore events? [Y/N]\n").lower()   #EH
+    #             if ask == 'n':
+    #                 ask_again = False
+    #         else:
+    #             break
