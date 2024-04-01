@@ -16,3 +16,5 @@ class cafe:
 
         print(f'The total stock in the cafe is worth: £{total}')
 
+joshua_cafe = cafe()
+joshua_cafe.total_stock()
