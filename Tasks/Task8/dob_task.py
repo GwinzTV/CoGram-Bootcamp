@@ -9,6 +9,7 @@ with open('DOB.txt', 'r') as file:
     # initialise the two lists that will store the sorted input information
     names = []
     dobs = []
+    
     # split and sort the name and DOB into their respective lists
     for line in lines:
         line = line.replace('\n', '').split()
