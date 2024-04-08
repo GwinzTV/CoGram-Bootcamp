@@ -1,5 +1,5 @@
 
-class alternate:
+class Alternate:
     def __init__(self):
         self.result = ''
         self.user_input = input("Hi user!, Please enter your sentence:\n")
@@ -34,6 +34,6 @@ class alternate:
         print('')
 
 # Script:
-alt = alternate()
+alt = Alternate()
 alt.characters()
 alt.words()

@@ -1,9 +1,20 @@
 
-class cafe:
+class Cafe:
     def __init__(self):
-        self.menu = ['Coffee', 'Pastries', 'Sandwiches', 'Salads']
-        self.stock = {'Coffee': 4, 'Pastries': 7, 'Sandwiches': 2, 'Salads': 10}
-        self.price = {'Coffee': 7.4, 'Pastries': 4.8, 'Sandwiches': 9.5, 'Salads': 6.5}
+        self.menu = ['Coffee',
+                     'Pastries', 
+                     'Sandwiches',
+                     'Salads']
+        self.stock = {'Coffee': 4,
+                      'Pastries': 7,
+                      'Sandwiches': 2,
+                      'Salads': 10}
+        self.price = {
+            'Coffee': 7.4,
+            'Pastries': 4.8,
+            'Sandwiches': 9.5,
+            'Salads': 6.5}
+
 
     def total_stock(self):
         menu = self.menu
@@ -16,5 +27,6 @@ class cafe:
 
         print(f'The total stock in the cafe is worth: £{total}')
 
-joshua_cafe = cafe()
+
+joshua_cafe = Cafe()
 joshua_cafe.total_stock()
