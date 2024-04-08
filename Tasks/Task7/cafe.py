@@ -1,5 +1,6 @@
 
 class Cafe:
+    # == initializing the class == #
     def __init__(self):
         self.menu = ['Coffee',
                      'Pastries', 
@@ -15,13 +16,13 @@ class Cafe:
             'Sandwiches': 9.5,
             'Salads': 6.5}
 
-
+    # == calculating the total stock == #
     def total_stock(self):
         menu = self.menu
         stock = self.stock
         price = self.price
         total = 0
-
+        # == iterates through all stock and sums their total value == #
         for item in menu:
             total += stock[item]*price[item]
 

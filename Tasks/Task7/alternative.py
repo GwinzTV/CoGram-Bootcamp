@@ -1,9 +1,13 @@
 
 class Alternate:
+    # == initializing the class == #
     def __init__(self):
         self.result = ''
-        self.user_input = input("Hi user!, Please enter your sentence:\n")
+        # == asks user for input and stores input in global variable == #
+        self.user_input = input(
+            '''Hi user!, Please enter your sentence:\n''')
     
+    # == capitalises the alternating characters of the user input == #
     def characters(self):
         result = []
         string = self.user_input
@@ -18,7 +22,7 @@ class Alternate:
         print(self.result)
         print('')
 
-
+    # == capitalises the alternating words of the user input == #
     def words(self):
         result = []
         string = self.user_input.split()
@@ -32,6 +36,7 @@ class Alternate:
         print('Alternating words:')
         print(self.result)
         print('')
+
 
 # Script:
 alt = Alternate()
