@@ -1,4 +1,8 @@
-
+''' 
+This program reads in the contents of a txt file, manipulates/sorts the
+contents to be arranged and output in a specific format.
+'''
+# opening the file using 'with'
 with open('DOB.txt', 'r') as file:
     # read in each line in the file as a list item
     lines = file.readlines()
