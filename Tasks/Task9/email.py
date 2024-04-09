@@ -98,7 +98,7 @@ while True:
         read_email(num)
         
     elif user_choice == 2:
-        # add logic here to view unread emails
+        # logic to view unread emails
         print('\nUnread emails:\n')
         # initializing list of unread emails
         unread = []
@@ -111,7 +111,7 @@ while True:
             print(''.join(unread))
             
     elif user_choice == 3:
-        # add logic here to quit appplication
+        # logic to quit appplication
         print('\nYou have chosen to Quit the application, Goodbye!')
         break
 
