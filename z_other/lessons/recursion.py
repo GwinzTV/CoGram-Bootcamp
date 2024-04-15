@@ -3,6 +3,7 @@ example fiibonacci code using recursion:
 '''
 
 def fibonacci(n):
+    # base case is either 1 or 0 
     if n == 0:
         return n
     elif n == 1:
