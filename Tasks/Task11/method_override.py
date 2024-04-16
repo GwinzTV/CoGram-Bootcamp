@@ -26,7 +26,7 @@ def main():
 
     name = input("Hi! please enter your name: ")
     correct = False
-    # user friendly error handling for possible incorrect input of age
+    # user friendly error handling for possible incorrect input of age (non-numerical inputs)
     while not correct:
         try:
             age = int(input(f'{name} please enter your age: '))
