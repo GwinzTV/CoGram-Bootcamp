@@ -46,3 +46,33 @@ def binary_search(arr,target):
 
 print('new code testing understanding')
 print(binary_search([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], 14))
+
+
+# binary search using recursion second day knowledge check:
+
+def binary_prac(arr,target):
+    def recursion(low, high):
+        if low > high:
+            return f'{target} not in list!'
+        
+        mid = (low + high) // 2
+
+        if arr[mid] == target:
+            return f'{target} is at index {mid}'
+        
+        elif target < arr[mid]:
+            return recursion(low, mid - 1)
+        
+        else:
+            return recursion(mid + 1, high)
+        
+    return recursion(0, len(arr) - 1)
+
+print('next one testing knowledge')
+
+print(binary_prac([1,2,3,4,5,6,7,8,9],3))
+print(binary_prac([1,2,3,4,5,6,7,8,9],5))
+print(binary_prac([1,2,3,4,5,6,7,8,9],7))
+print(binary_prac([1,2,3,4,5,6,7,8,9],8))
+print(binary_prac([1,2,3,4,5,6,7,8,9],2))
+print(binary_prac([1,2,3,4,5,6,7,8,9],12))
