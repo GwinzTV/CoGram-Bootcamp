@@ -5,6 +5,14 @@ Common uses of Stacks:
  - "Most recently used" features
  - Backtracking algorithms
  - Expression evaluations and syntax parsing
+
+    #########################################
+    #             Complexities              #
+    #---------------------------------------#
+    # Push:              |   Pop:           #
+    #  - space: O(1)     |    - space: O(1) #
+    #  - time: O(1)      |    - time: O(1)  #
+    #########################################
 '''
 
 class Stack:

@@ -6,6 +6,14 @@ Common uses of Queues:
  - Printing Queues
  - Web Servers
  - Breath-First Search
+
+    #########################################
+    #             Complexities              #
+    #---------------------------------------#
+    # Enqueue:           |   Dequeue:       #
+    #  - space: O(1)     |    - space: O(1) #
+    #  - time: O(1)      |    - time: O(1)  #
+    #########################################
 '''
 
 from collections import deque
@@ -14,7 +22,7 @@ class Queue:
     def __init__(self):
         self.queue = deque()
 
-    
+
     def enqueue(self, value):
         self.queue.append(value)
 

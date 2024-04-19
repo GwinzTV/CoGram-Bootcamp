@@ -34,12 +34,12 @@ class Course:
 class OOPCourse(Course):
     # initialising subclass
     def __init__(self):
-        self.descripstion = "OOP Fundamentals"
+        self.description = "OOP Fundamentals"
         self.trainer = "Mr Anon A. Mouse"
 
     # prints out details of the course
     def trainer_details(self):
-        print(f'This course is about {self.descripstion}, and the led by {self.trainer}.')
+        print(f'This course is about {self.description}, and the led by {self.trainer}.')
 
     # prints out course ID
     def show_course_id(self):
