@@ -1,0 +1,2 @@
+1 -- add a password path to SQL password nest in classes, and access through an import
+from file outside of remote git repo for secure use in library management project.
