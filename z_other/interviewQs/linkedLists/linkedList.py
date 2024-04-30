@@ -1,5 +1,5 @@
 '''
-we are going to createt a linke list here and define functions that append, prepend, delete, and insert nodes
+we are going to createt a linked list here and define functions that append, prepend, delete, and insert nodes
 '''
 # node class
 class Node:
