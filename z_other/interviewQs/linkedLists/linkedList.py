@@ -58,10 +58,8 @@ class LinkedList:
         while current_node and current_node.data != data:
             prev = current_node
             current_node = current_node.next
-
         if current_node is None:
             return f'{data} not in linked list!'
-        
         # set the previous node's next pointer to the current node's next pointer
         prev.next = current_node.next
         # set current node to None, deletion
