@@ -65,7 +65,7 @@ class LinkedList:
         # set current node to None, deletion
         current_node = None
 
-    
+    # prints the linked list
     def print_list(self):
         current_node = self.head
         llstr = ''
