@@ -1,6 +1,8 @@
 '''
-Question: Implement a function that checks if a given string of parantheses is balanced using a stack.
+Question: Implement a function that checks if a given string of parantheses is
+balanced using a stack.
 '''
+
 
 def is_balanced(input):
     stack = []
