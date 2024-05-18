@@ -14,22 +14,21 @@ class TestLargestMethods(unittest.TestCase):
         result = largest(array)
         # Assert
         self.assertEqual(result, 18)
-    
+
     def test_largest_number(self):
         # Arrrange
-        array = [1,6,12,7,18,9,2]
+        array = [1, 6, 12, 7, 18, 9, 2]
         # Act
         result = largest(array)
         # Assert
         self.assertEqual(result, 18)
 
 
-
 class TestSumtMethods(unittest.TestCase):
 
     def test_sum_array(self):
         # Arrange
-        array = [1,6,12,7,18,9,2]
+        array = [1, 6, 12, 7, 18, 9, 2]
         # Act
         result = sum_array(array, 2)
         # Assert
@@ -37,12 +36,11 @@ class TestSumtMethods(unittest.TestCase):
 
     def test_negative_case_sum_array(self):
         # Arrange
-        array = [1,'6',12,'7',18,'9',2]
+        array = [1, '6', 12, '7', 18, '9', 2]
         # Act
         result = sum_array(array, 2)
         # Assert
         self.assertEqual(result, 19)
-
 
 
 class TestLinkedList(unittest.TestCase):
@@ -90,9 +88,6 @@ class TestLinkedList(unittest.TestCase):
         result = ll.delete(3)
         # Assert
         self.assertEqual(result, 3)
-
-        
-        
 
 
 if __name__ == "__main__":
