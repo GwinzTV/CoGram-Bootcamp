@@ -1,0 +1,2 @@
+Modify add task : Modify the Add Task function to accept due date in days, and format accordingly : May 17, 2024
+Add delete function : make function to delete the tasks as required : May 20, 2024
